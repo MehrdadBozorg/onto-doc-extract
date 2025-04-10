@@ -3,13 +3,18 @@ from fitz import Document
 
 from typing import Tuple
 
+from enum import Enum
+from dataclasses import dataclass
+
+class Orientation(Enum):
+    HORIZONTAL = "horizontal"
+    VERTICAL = "vertical"
+
 BoundingBox = Tuple[float, float, float, float]
 
 @dataclass
 class BlockNode:
     bbox: BoundingBox
-    text: str
-    page_id: str
     id: str
     
 
@@ -18,7 +23,7 @@ class GraphNode:
     bbox: BoundingBox
     text: str
     page_id: str
-    id: str
+    node_id: str
     vicinities: list[str]
 
     
