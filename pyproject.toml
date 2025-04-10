@@ -9,7 +9,6 @@ readme = "README.md"
 requires-python = ">=3.11"
 dependencies = [
     "pymupdf (>=1.25.4,<2.0.0)",
-    "pdfplumber (>=0.11.5,<0.12.0)",
     "mypy (>=1.15.0,<2.0.0)",
 ]
 
@@ -19,6 +18,7 @@ packages = [{include = "src"}]
 
 [tool.poetry.group.dev.dependencies]
 pytest = "^8.3.5"
+pdfplumber = "^0.11.5"
 
 [build-system]
 requires = ["poetry-core>=2.0.0,<3.0.0"]
